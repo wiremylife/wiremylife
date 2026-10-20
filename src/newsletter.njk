@@ -1,13 +1,10 @@
 ---
 layout: base.njk
-title: Newsletter
+title: Weekly newsletter
+description: One short email a week. New car and home AI connectors, what stopped working, and price changes.
 ---
 <section class="cta tall">
 <h1>The WireMyLife weekly</h1>
 <p class="lead">New car and home connectors, what broke, what got cheaper. One short email a week, no spam.</p>
-<!-- KIT_FORM_PLACEHOLDER: replace this form with the Kit embed (form action from Kit > Grow > Landing Pages & Forms) -->
-<form class="signup" onsubmit="event.preventDefault(); this.querySelector('p').hidden=false;">
-  <input type="email" required placeholder="you@example.com" aria-label="Email address"><button class="btn" type="submit">Subscribe</button>
-  <p class="small muted" hidden>Signup isn't connected yet. Check back soon!</p>
-</form>
+{% include "signup.njk" %}
 </section>

@@ -1,16 +1,21 @@
 ---
 layout: base.njk
-pagination: { data: db.connectors, size: 1, alias: c }
+pagination:
+  data: db.connectors
+  size: 1
+  alias: c
+  addAllPagesToCollections: true
 permalink: "/c/{{ c.id }}/"
 eleventyComputed:
   title: "{{ c.name }}: {{ c.subcategory }} AI connector"
-  description: "Does {{ c.name }} work with Claude, ChatGPT, Gemini or Grok? Status, setup, sign-in and price."
+  description: "{{ c.name }} is a {{ c.subcategory }} AI connector ({{ c.badge.label }}). Setup, sign-in, price, and which assistants it works with."
 ---
-<p class="crumbs small"><a href="/">All connectors</a> / {{ c.category }} / {{ c.subcategory }}</p>
+{% set brandGuides = guides | where('brandGroup', c.brand_group) %}
+<p class="crumbs small"><a href="/">All connectors</a> / <a href="/{{ c.categorySlug }}/">{{ c.category }}</a> / {% if brandGuides.length %}<a href="/best/{{ brandGuides[0].slug }}/">{{ c.subcategory }}</a>{% else %}{{ c.subcategory }}{% endif %}</p>
 <div class="detail-head">
   <div><h1>{{ c.name }}</h1>
   <p class="muted">{{ c.maker }} · {{ 'Official' if c.maker_type == 'official' else ('Vendor' if c.maker_type == 'vendor' else 'Community') }} · {{ 'Hosted' if c.type == 'hosted' else ('Built-in' if c.type == 'built-in' else 'Self-hosted') }}</p></div>
-  <div class="status-box"><span class="badge big {{ c.badge.cls }}">{{ c.badge.label }}</span>
+  <div class="status-box">{% if c.isFeatured %}<p><span class="featured-flag">Featured</span></p><p class="small muted">Paid placement. The status badge is from our checks.</p>{% endif %}<span class="badge big {{ c.badge.cls }}">{{ c.badge.label }}</span>
   <p class="small">{{ c.status_detail }}</p><p class="small muted">Checked {{ c.last_checked | date }}</p></div>
 </div>
 {% if c.capabilities %}<p class="lead">{{ c.capabilities }}</p>{% endif %}
@@ -28,7 +33,22 @@ eleventyComputed:
     {% if c.response_ms %}<dt>Response time</dt><dd>{{ c.response_ms }} ms on last check</dd>{% endif %}
   </dl>
 </div>
-<p><a class="btn" href="{{ c.docs_url }}" rel="nofollow noopener">Official setup docs →</a> <a class="btn ghost" href="/submit/?fix={{ c.id }}">Report a problem</a></p>
+<p>
+  {% if c.affiliateUrl %}
+  <a class="btn" href="{{ c.affiliateUrl }}" rel="sponsored nofollow noopener" target="_blank">Visit {{ c.name }}</a>
+  {% if c.docs_url != c.affiliateUrl %}<a class="btn ghost" href="{{ c.docs_url }}" rel="nofollow noopener" target="_blank">Official setup docs</a>{% endif %}
+  {% else %}
+  <a class="btn" href="{{ c.docs_url }}" rel="nofollow noopener" target="_blank">Official setup docs →</a>
+  {% endif %}
+  <a class="btn ghost" href="/submit/?fix={{ c.id }}">Report a problem</a>
+</p>
+{% if c.affiliateUrl %}<p class="small muted">Affiliate link. We may earn a commission if you sign up. <a href="/disclosure/">Disclosure</a>.</p>{% endif %}
+<p class="small">More in <a href="/{{ c.categorySlug }}/">{{ c.category }}</a>{% if brandGuides.length %} · <a href="/best/{{ brandGuides[0].slug }}/">{{ brandGuides[0].title }}</a>{% endif %}</p>
+<section class="cta">
+  <h2>What broke this week, in your inbox</h2>
+  <p>One short email a week when a connector like this changes status.</p>
+  {% include "signup.njk" %}
+</section>
 {% set me = c.id %}{% set siblings = db.connectors | where('brand_group', c.brand_group) %}
 {% if siblings.length > 1 %}
 <h2>Other {{ c.subcategory }} options</h2>

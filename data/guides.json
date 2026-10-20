@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "tesla-mcp-servers",
+    "brandGroup": "tesla",
+    "categorySlug": "car",
+    "categoryName": "Car",
+    "pickerHref": "/pick/tesla/",
+    "pickerLabel": "Which Tesla connector should I pick?",
+    "title": "Best Tesla MCP servers and AI connectors",
+    "description": "Ranked Tesla MCP servers and AI connectors for Claude, ChatGPT, Gemini, and Grok, with live status badges.",
+    "lede": "Every Tesla connector we track, ranked from the healthiest status to the quietest repo. Featured placements are labelled and stay at the top. Every other rank follows the live check, then official or vendor listings, then GitHub stars."
+  },
+  {
+    "slug": "home-assistant-ai-connectors",
+    "brandGroup": "home-assistant",
+    "categorySlug": "home",
+    "categoryName": "Home",
+    "pickerHref": "/pick/home-assistant/",
+    "pickerLabel": "Which Home Assistant connector should I use?",
+    "title": "Best Home Assistant AI connectors",
+    "description": "Ranked Home Assistant MCP servers and AI connectors, including the built-in integration, ha-mcp, and hass-mcp, with live status badges.",
+    "lede": "Home Assistant connectors ranked by the latest check. Featured placements are labelled and pinned to the top. After that, rank follows live status, then official or vendor listings, then GitHub stars."
+  }
+]

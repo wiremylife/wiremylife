@@ -13,4 +13,4 @@ description: Tessie vs Teslemetry vs mytesla.io vs Teslascope vs self-hosted Tes
 <div class="note"><b>Safety first:</b> anything that can unlock the car should require your approval in the assistant. Start read-only, and turn commands on later.</div>
 <h2>All Tesla options, by current status</h2>
 {% set rows = db.connectors | where('brand_group', 'tesla') %}{% include "compare.njk" %}
-<p class="small muted">Prices marked "check vendor" come from third-party summaries and haven't been confirmed on vendor pages yet. Statuses refresh every 6 hours.</p>
+<p class="small muted">Prices marked "check vendor" come from third-party summaries and haven't been confirmed on vendor pages yet. Statuses refresh every 6 hours. <a href="/best/tesla-mcp-servers/">See the ranked list of Tesla MCP servers</a> · <a href="/car/">all car connectors</a>.</p>

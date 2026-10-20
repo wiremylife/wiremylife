@@ -1,0 +1,22 @@
+---
+layout: base.njk
+pagination:
+  data: guides
+  size: 1
+  alias: guide
+  addAllPagesToCollections: true
+permalink: "/best/{{ guide.slug }}/"
+eleventyComputed:
+  title: "{{ guide.title }}"
+  description: "{{ guide.description }}"
+---
+<h1>{{ guide.title }}</h1>
+<p class="lead">{{ guide.lede }}</p>
+{% set rows = db.connectors | where('brand_group', guide.brandGroup) %}
+<p>We currently track {{ rows | length }} connectors.
+{% if rows.length %}The top of the list:
+{% for c in rows %}{% if loop.index0 < 3 %}{% if loop.index0 == 1 and rows.length == 2 %} and {% elif loop.index0 == 1 %}, {% elif loop.index0 == 2 %}, and {% endif %}<a href="/c/{{ c.id }}/">{{ c.name }}</a>{% endif %}{% endfor %}.{% endif %}
+</p>
+{% set ranked = true %}
+{% include "compare.njk" %}
+<p class="small"><a href="{{ guide.pickerHref }}">{{ guide.pickerLabel }}</a> · <a href="/{{ guide.categorySlug }}/">All {{ guide.categoryName }} connectors</a> · <a href="/how-we-check/">How we check</a> · <a href="/newsletter/">Get the newsletter</a></p>

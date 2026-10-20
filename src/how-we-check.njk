@@ -1,9 +1,10 @@
 ---
 layout: base.njk
 title: How we check
+description: Status badges come from automated MCP and repository checks every 6 hours. Payment can buy a Featured label, not a status.
 ---
 <h1>How we check</h1>
-<p class="lead">Badges come from automated checks, never from payment.</p>
+<p class="lead">Badges come from automated checks, never from payment. A paid pin wears a separate Featured label and does not change these badges. <a href="/advertise/">Pricing</a> · <a href="/disclosure/">disclosure</a>.</p>
 <div class="facts"><dl>
 {% for key in ['tested','online_auth','untested','stale','down'] %}{% set b = db.badges[key] %}<dt><span class="badge {{ b.cls }}">{{ b.label }}</span></dt><dd>{{ b.hint }}</dd>{% endfor %}
 </dl></div>
