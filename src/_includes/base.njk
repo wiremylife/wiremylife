@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description or site.tagline }}">
+<link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+  <a class="logo" href="/"><img src="/favicon.svg" alt="" width="28" height="28"> Wire<b>My</b>Life</a>
+  <nav><a href="/pick/tesla/">Tesla</a><a href="/pick/home-assistant/">Home Assistant</a><a href="/my-stack/">My stack</a><a href="/how-we-check/">How we check</a><a class="btn sm" href="/newsletter/">Newsletter</a></nav>
+</div></header>
+<main class="wrap">{{ content | safe }}</main>
+<footer class="foot"><div class="wrap">
+  <p><b>WireMyLife</b> · {{ db.total }} connectors · statuses last checked {{ db.last_run | date }}</p>
+  <p><a href="/submit/">Submit a connector</a> · <a href="/submit/#featured">Get featured</a> · <a href="/how-we-check/">How we check</a> · <a href="/newsletter/">Newsletter</a></p>
+  <p class="muted">Independent. Not affiliated with Tesla, Home Assistant, or any vendor listed. Featured listings are always labelled. Never give an AI connector more access than you'd give a stranger with your keys.</p>
+</div></footer>
+</body></html>

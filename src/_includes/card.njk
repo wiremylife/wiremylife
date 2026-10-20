@@ -1,0 +1,7 @@
+<a class="card" href="/c/{{ c.id }}/" data-cat="{{ c.category }}" data-status="{{ c.statusGroup }}" data-assist="{{ c.akeys | join(' ') }}" data-text="{{ (c.name + ' ' + c.subcategory + ' ' + c.maker + ' ' + c.capabilities) | lower }}">
+  <div class="card-top"><span class="pill">{{ c.category }} · {{ c.subcategory }}</span><span class="badge {{ c.badge.cls }}">{{ c.badge.label }}</span></div>
+  <h3>{{ c.name }}</h3>
+  <p class="muted small">{{ c.maker }} · {{ 'Official' if c.maker_type == 'official' else ('Vendor' if c.maker_type == 'vendor' else 'Community') }} · {{ 'Hosted' if c.type == 'hosted' else ('Built-in' if c.type == 'built-in' else 'Self-hosted') }}</p>
+  {% if c.capabilities %}<p class="small">{{ c.capabilities }}</p>{% endif %}
+  <div class="card-foot small muted">{% if c.github %}★ {{ c.github.stars }} · last commit {{ c.github.pushed_at }}{% elif c.response_ms %}answered in {{ c.response_ms }} ms{% else %}{{ c.price }}{% endif %}</div>
+</a>

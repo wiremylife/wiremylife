@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Which Tesla AI connector should I pick?
+description: Tessie vs Teslemetry vs mytesla.io vs Teslascope vs self-hosted Tesla MCP servers, compared.
+---
+<h1>Which Tesla connector should I pick?</h1>
+<p class="lead">Every option below lets an AI assistant read your car's status, and most can send commands. Here's how to choose.</p>
+<div class="choose">
+  <div><h3>Easiest: you already pay for (or want) a Tesla app</h3><p><a href="/c/tessie/">Tessie</a> is listed in Claude's connector directory and ChatGPT's plugin directory, and documents setup for Gemini and Grok. That's the widest coverage we've found. <a href="/c/teslascope-mcp/">Teslascope</a>, <a href="/c/mytesla-io/">mytesla.io</a> and <a href="/c/teslemetry/">Teslemetry</a> are hosted alternatives with different pricing models.</p></div>
+  <div><h3>Data nerd: you run TeslaMate</h3><p><a href="/c/teslamate-mcp/">TeslaMate MCP</a> lets the AI query your own TeslaMate database (battery degradation, charging cost, drives). It's read-only by default, and nothing leaves your network if you keep it on a VPN.</p></div>
+  <div><h3>DIY: you want the official Fleet API, no middleman</h3><p><a href="/c/myteslamate-mcp-tesla/">MyTeslaMate mcp-tesla</a> and <a href="/c/tesla-fleet-mcp/">tesla-fleet-mcp</a> talk to Tesla's Fleet API directly. Expect a Tesla Developer account, OAuth setup and virtual-key pairing.</p></div>
+</div>
+<div class="note"><b>Safety first:</b> anything that can unlock the car should require your approval in the assistant. Start read-only, and turn commands on later.</div>
+<h2>All Tesla options, by current status</h2>
+{% set rows = db.connectors | where('brand_group', 'tesla') %}{% include "compare.njk" %}
+<p class="small muted">Prices marked "check vendor" come from third-party summaries and haven't been confirmed on vendor pages yet. Statuses refresh every 6 hours.</p>

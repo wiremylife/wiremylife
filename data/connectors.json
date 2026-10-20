@@ -1,0 +1,1879 @@
+{
+  "generated_by": "seed.py",
+  "connectors": [
+    {
+      "id": "teslemetry",
+      "name": "Teslemetry",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "Teslemetry",
+      "maker_type": "vendor",
+      "type": "hosted",
+      "endpoint": "https://api.teslemetry.com/mcp",
+      "install": null,
+      "repo": null,
+      "docs_url": "https://teslemetry.com/docs/mcp/introduction",
+      "auth": "OAuth / Teslemetry token",
+      "needs_tesla_virtual_key": true,
+      "assistants": [
+        "Claude (documented)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "check vendor",
+      "price_reported": "$30 per vehicle, 500 command credits/mo (search summary of teslemetry.com/pricing; billing period not confirmed)",
+      "tool_count": null,
+      "capabilities": "Vehicle data, climate, charging, locks, navigation; reads free, commands use credits",
+      "setup_difficulty": 2,
+      "notes": "Requires an active Teslemetry subscription.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "online_auth",
+      "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": 151,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "tessie",
+      "name": "Tessie",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "Tessie",
+      "maker_type": "vendor",
+      "type": "hosted",
+      "endpoint": "https://mcp.tessie.com",
+      "install": null,
+      "repo": null,
+      "docs_url": "https://developer.tessie.com/reference/mcp",
+      "auth": "OAuth (directory) or bearer token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Claude (in directory)",
+        "ChatGPT (in plugin directory)",
+        "Gemini (custom connector)",
+        "Grok (custom connector)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "check vendor",
+      "price_reported": "$6.99/vehicle/mo; Pro $12.99 (third-party summary)",
+      "tool_count": null,
+      "capabilities": "Battery, range, location, locks, charging, climate, Sentry/Valet, lights/horn",
+      "setup_difficulty": 1,
+      "notes": "Most assistant coverage of any car connector we list.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "online_auth",
+      "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": 98,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "mytesla-io",
+      "name": "mytesla.io",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "mytesla.io",
+      "maker_type": "vendor",
+      "type": "hosted",
+      "endpoint": "https://mcp.mytesla.io/mcp",
+      "install": null,
+      "repo": null,
+      "docs_url": "https://mytesla.io/docs",
+      "auth": "OAuth",
+      "needs_tesla_virtual_key": true,
+      "assistants": [
+        "Claude (documented)",
+        "ChatGPT (documented)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "check vendor",
+      "price_reported": "Driver $4.99/mo (500 credits); Driver Max $9.99/mo (third-party summary)",
+      "tool_count": null,
+      "capabilities": "Climate, charging, locks, alerts, navigation, status (cannot drive the car)",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "online_auth",
+      "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": 1038,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "teslascope-mcp",
+      "name": "Teslascope MCP",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "Teslascope",
+      "maker_type": "vendor",
+      "type": "hosted",
+      "endpoint": "https://mcp.teslascope.com",
+      "install": null,
+      "repo": null,
+      "docs_url": "https://teslascope.com/blog/6.2",
+      "auth": "Sign in (OAuth)",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "ChatGPT (documented)",
+        "Claude (documented)",
+        "Codex (documented)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "check vendor",
+      "price_reported": "Plus $3.99/vehicle/mo; Pro $6.99 (third-party summary)",
+      "tool_count": null,
+      "capabilities": "Cars, trips, charging, Fleet API commands",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "online_auth",
+      "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": 139,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "tessie-mcp-server-community",
+      "name": "Tessie MCP Server (community)",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "akrowczyk",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "git clone + npm run build",
+      "repo": "akrowczyk/tessie-mcp-server",
+      "docs_url": "https://github.com/akrowczyk/tessie-mcp-server",
+      "auth": "Tessie API token (env var)",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "Free (open source); needs a Tessie subscription",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Battery health, climate modes, Sentry/Valet/Guest, charging history",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 235 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 1,
+        "pushed_at": "2026-02-27",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "teslamate-mcp",
+      "name": "TeslaMate MCP",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "cobanov",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "uv sync, or Docker ghcr.io/cobanov/teslamate-mcp",
+      "repo": "cobanov/teslamate-mcp",
+      "docs_url": "https://github.com/cobanov/teslamate-mcp",
+      "auth": "TeslaMate Postgres URL; bearer token for remote",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-only",
+      "risky_actions": [],
+      "price": "Free (open source); needs your own TeslaMate",
+      "price_reported": null,
+      "tool_count": 57,
+      "capabilities": "Battery degradation, charging costs, drives, efficiency, charts (v0.13.5)",
+      "setup_difficulty": 4,
+      "notes": "Read-only SQL by default. Your database is your location history: keep it on a private network.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 7 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 140,
+        "pushed_at": "2026-10-13",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 2,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "myteslamate-mcp-tesla",
+      "name": "MyTeslaMate mcp-tesla",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "MyTeslaMate",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Docker",
+      "repo": "MyTeslaMate/mcp-tesla",
+      "docs_url": "https://github.com/MyTeslaMate/mcp-tesla",
+      "auth": "Tesla Developer account + OAuth",
+      "needs_tesla_virtual_key": true,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": 98,
+      "capabilities": "Official Tesla Fleet API tools plus TeslaMate integration",
+      "setup_difficulty": 5,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 111 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 5,
+        "pushed_at": "2026-07-01",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "tesla-fleet-mcp",
+      "name": "tesla-fleet-mcp",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "supervised-nl",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node (stdio or Streamable HTTP)",
+      "repo": "supervised-nl/tesla-fleet-mcp",
+      "docs_url": "https://github.com/supervised-nl/tesla-fleet-mcp",
+      "auth": "Tesla Fleet API OAuth",
+      "needs_tesla_virtual_key": true,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 5,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 38 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 0,
+        "pushed_at": "2026-09-12",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "ysrdevs-tesla-mcp",
+      "name": "ysrdevs tesla-mcp",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "ysrdevs",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Python",
+      "repo": "ysrdevs/tesla-mcp",
+      "docs_url": "https://github.com/ysrdevs/tesla-mcp",
+      "auth": "Tesla Fleet API OAuth",
+      "needs_tesla_virtual_key": true,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": 96,
+      "capabilities": "",
+      "setup_difficulty": 5,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 196 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 1,
+        "pushed_at": "2026-04-07",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "tesla-mcp-server-signing-proxy",
+      "name": "tesla-mcp-server (signing proxy)",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "tylergibbs1",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node, bundled local signing proxy",
+      "repo": "tylergibbs1/tesla-mcp-server",
+      "docs_url": "https://github.com/tylergibbs1/tesla-mcp-server",
+      "auth": "Tesla Fleet API OAuth",
+      "needs_tesla_virtual_key": true,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 5,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 183 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 1,
+        "pushed_at": "2026-04-20",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "scald-tesla-mcp",
+      "name": "scald tesla-mcp",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "scald",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node",
+      "repo": "scald/tesla-mcp",
+      "docs_url": "https://github.com/scald/tesla-mcp",
+      "auth": "Tesla account",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "honk/flash",
+        "charging start/stop"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 4,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 585 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 19,
+        "pushed_at": "2025-03-14",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "teslamate-http-mcp",
+      "name": "TeslaMate HTTP MCP",
+      "category": "Car",
+      "subcategory": "Tesla",
+      "brand_group": "tesla",
+      "maker": "LesterAJohn",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "npm (stdio or HTTP)",
+      "repo": "LesterAJohn/TeslaMate-mcp",
+      "docs_url": "https://github.com/LesterAJohn/TeslaMate-mcp",
+      "auth": "TeslaMate HTTP API",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source); needs your own TeslaMate",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Logging suspend/resume, GPX export, API passthrough",
+      "setup_difficulty": 4,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 82 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 0,
+        "pushed_at": "2026-07-30",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "smartcar-mcp-test",
+      "name": "Smartcar MCP (test)",
+      "category": "Car",
+      "subcategory": "Multi-brand",
+      "brand_group": "other-car",
+      "maker": "thachdoSC",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node",
+      "repo": "thachdoSC/smartcar-mcp-test",
+      "docs_url": "https://github.com/thachdoSC/smartcar-mcp-test",
+      "auth": "Smartcar OAuth2 client credentials",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "lock",
+        "charging start"
+      ],
+      "price": "Free (open source); Smartcar API pricing: check vendor",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Signals, lock, start charge across Smartcar-supported brands",
+      "setup_difficulty": 5,
+      "notes": "Appears to be a test/prototype repo.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 179 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 0,
+        "pushed_at": "2026-04-24",
+        "archived": false,
+        "license": null,
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "rivian-mcp",
+      "name": "rivian-mcp",
+      "category": "Car",
+      "subcategory": "Rivian",
+      "brand_group": "other-car",
+      "maker": "PatrickHeneise",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node",
+      "repo": "PatrickHeneise/rivian-mcp",
+      "docs_url": "https://github.com/PatrickHeneise/rivian-mcp",
+      "auth": "Rivian login + 2FA",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-only",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Battery, range, charging, OTA, doors, location, charge history",
+      "setup_difficulty": 4,
+      "notes": "Uses Rivian's undocumented API; may break without notice.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 5 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 0,
+        "pushed_at": "2026-10-15",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "bluelink-mcp-hyundai",
+      "name": "bluelink-mcp (Hyundai)",
+      "category": "Car",
+      "subcategory": "Hyundai",
+      "brand_group": "other-car",
+      "maker": "mattoddie",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node",
+      "repo": "mattoddie/bluelink-mcp",
+      "docs_url": "https://glama.ai/mcp/servers/mattoddie/bluelink-mcp",
+      "auth": "Bluelink username/password/PIN (env vars)",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "unlock",
+        "climate",
+        "charging"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "EV charge status/limits, climate, locks, location, trips",
+      "setup_difficulty": 4,
+      "notes": "Writes off unless BLUELINK_ALLOW_WRITES is set.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 0 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 1,
+        "pushed_at": "2026-10-20",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "kia-connect-mcp",
+      "name": "kia-connect-mcp",
+      "category": "Car",
+      "subcategory": "Kia",
+      "brand_group": "other-car",
+      "maker": "sharozdawa",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "sharozdawa/kia-connect-mcp",
+      "docs_url": "https://github.com/sharozdawa/kia-connect-mcp",
+      "auth": "Kia Connect login",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 4,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 172 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 4,
+        "pushed_at": "2026-05-01",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "mcp-obd-ii",
+      "name": "mcp_obd_ii",
+      "category": "Car",
+      "subcategory": "Any car (OBD-II)",
+      "brand_group": "other-car",
+      "maker": "janspoerer",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Python + ELM327 adapter",
+      "repo": "janspoerer/mcp_obd_ii",
+      "docs_url": "https://github.com/janspoerer/mcp_obd_ii",
+      "auth": "None (local adapter)",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-only",
+      "risky_actions": [],
+      "price": "Free (open source); ELM327 adapter needed",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Live PIDs, trouble codes, mock mode",
+      "setup_difficulty": 4,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 367 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 2,
+        "pushed_at": "2025-10-18",
+        "archived": false,
+        "license": null,
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "home-assistant-mcp-server-built-in",
+      "name": "Home Assistant MCP Server (built-in)",
+      "category": "Home",
+      "subcategory": "Home Assistant",
+      "brand_group": "home-assistant",
+      "maker": "Home Assistant",
+      "maker_type": "official",
+      "type": "built-in",
+      "endpoint": null,
+      "install": null,
+      "repo": null,
+      "docs_url": "https://www.home-assistant.io/integrations/mcp_server/",
+      "auth": "Home Assistant login (OAuth) / token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Claude",
+        "ChatGPT",
+        "Any remote-MCP client (HA must be reachable)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "locks/garage if exposed to Assist"
+      ],
+      "price": "Free (part of Home Assistant)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Control and query entities exposed to Assist; no automation editing",
+      "setup_difficulty": 2,
+      "notes": "Cloud assistants need remote access (e.g. Home Assistant Cloud).",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "home-assistant-mcp-client-built-in",
+      "name": "Home Assistant MCP client (built-in)",
+      "category": "Home",
+      "subcategory": "Home Assistant",
+      "brand_group": "home-assistant",
+      "maker": "Home Assistant",
+      "maker_type": "official",
+      "type": "built-in",
+      "endpoint": null,
+      "install": null,
+      "repo": null,
+      "docs_url": "https://www.home-assistant.io/integrations/mcp/",
+      "auth": "Per external server",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Home Assistant Assist (uses outside MCP tools)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (part of Home Assistant)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Lets HA's own conversation agent call external MCP tools",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "ha-mcp",
+      "name": "ha-mcp",
+      "category": "Home",
+      "subcategory": "Home Assistant",
+      "brand_group": "home-assistant",
+      "maker": "homeassistant-ai",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "HACS add-on / uvx / Docker",
+      "repo": "homeassistant-ai/ha-mcp",
+      "docs_url": "https://github.com/homeassistant-ai/ha-mcp",
+      "auth": "HA long-lived token or OAuth",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)",
+        "Claude (remote)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "edits automations/dashboards",
+        "backups/restore"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Build/edit automations, scripts, dashboards; debug traces; history; read-only mode",
+      "setup_difficulty": 3,
+      "notes": "The community favourite for configuring HA with AI. Breaking change in v7.3.0.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 1 day ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 5141,
+        "pushed_at": "2026-10-19",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 14,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "hass-mcp",
+      "name": "hass-mcp",
+      "category": "Home",
+      "subcategory": "Home Assistant",
+      "brand_group": "home-assistant",
+      "maker": "voska",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Docker voska/hass-mcp",
+      "repo": "voska/hass-mcp",
+      "docs_url": "https://github.com/voska/hass-mcp",
+      "auth": "HA_URL + HA_TOKEN",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Entities, device control, automations, history, logs",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 1 day ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 348,
+        "pushed_at": "2026-10-19",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 8,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "homeassistant-mcp-tevonsb",
+      "name": "homeassistant-mcp (tevonsb)",
+      "category": "Home",
+      "subcategory": "Home Assistant",
+      "brand_group": "home-assistant",
+      "maker": "tevonsb",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node",
+      "repo": "tevonsb/homeassistant-mcp",
+      "docs_url": "https://github.com/tevonsb/homeassistant-mcp",
+      "auth": "HA token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Device control, automations, add-on/HACS management, SSE events",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 268 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 576,
+        "pushed_at": "2026-01-25",
+        "archived": false,
+        "license": "Apache-2.0",
+        "open_issues": 20,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "google-home-mcp-official-early-access",
+      "name": "Google Home MCP (official, early access)",
+      "category": "Home",
+      "subcategory": "Google Home / Nest",
+      "brand_group": "google-home",
+      "maker": "Google",
+      "maker_type": "official",
+      "type": "hosted",
+      "endpoint": null,
+      "install": null,
+      "repo": null,
+      "docs_url": "https://developers.home.google.com/mcp/home",
+      "auth": "Google Cloud project + OAuth",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (developer setup)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Requires Google Home Premium Advanced (US): check vendor",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "list_homes, home states, run_home_actions, history",
+      "setup_difficulty": 5,
+      "notes": "Early access, US only.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "googlehome-mcp-unofficial",
+      "name": "googlehome-mcp (unofficial)",
+      "category": "Home",
+      "subcategory": "Google Home / Nest",
+      "brand_group": "google-home",
+      "maker": "ericmigi",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "ericmigi/googlehome-mcp",
+      "docs_url": "https://github.com/ericmigi/googlehome-mcp",
+      "auth": "Google account",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 4,
+      "notes": "Uses an undocumented Google API.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 52 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 11,
+        "pushed_at": "2026-08-29",
+        "archived": false,
+        "license": null,
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "homey-mcp-server",
+      "name": "Homey MCP Server",
+      "category": "Home",
+      "subcategory": "Homey",
+      "brand_group": "homey",
+      "maker": "Athom (Homey)",
+      "maker_type": "official",
+      "type": "hosted",
+      "endpoint": "https://mcp.athom.com",
+      "install": null,
+      "repo": null,
+      "docs_url": "https://homey.app/en-us/news/introducing-the-homey-mcp-server/",
+      "auth": "Homey account (OAuth)",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "ChatGPT (custom, paid plan)",
+        "Claude (custom, paid plan)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free with Homey account",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Device status/control, Flows, Advanced Flows, Moods",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "online_auth",
+      "status_detail": "Answered, sign-in required (HTTP 401)",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": 597,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "hubitat-local-mcp-server",
+      "name": "Hubitat local MCP server",
+      "category": "Home",
+      "subcategory": "Hubitat",
+      "brand_group": "hubitat",
+      "maker": "kingpanther13",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Hubitat app (C-7/C-8/C-8 Pro)",
+      "repo": "kingpanther13/hubitat-local-mcp-server",
+      "docs_url": "https://github.com/kingpanther13/hubitat-local-mcp-server",
+      "auth": "Local or Hubitat Cloud endpoint",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Devices, rules, rooms, hub management",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 1 day ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 18,
+        "pushed_at": "2026-10-19",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 19,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "openhab-mcp-add-on",
+      "name": "openHAB MCP add-on",
+      "category": "Home",
+      "subcategory": "openHAB",
+      "brand_group": "openhab",
+      "maker": "openHAB",
+      "maker_type": "official",
+      "type": "built-in",
+      "endpoint": null,
+      "install": "openHAB add-on, http://<host>:8080/mcp",
+      "repo": null,
+      "docs_url": "https://www.openhab.org/addons/integrations/mcp/",
+      "auth": "openHAB API token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Semantic-model item control and scheduling",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": null,
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "smartthings-mcp-veonua",
+      "name": "smartthings-mcp (veonua)",
+      "category": "Home",
+      "subcategory": "SmartThings",
+      "brand_group": "smartthings",
+      "maker": "veonua",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Python",
+      "repo": "veonua/smartthings-mcp",
+      "docs_url": "https://github.com/veonua/smartthings-mcp",
+      "auth": "SmartThings token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 471 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 5,
+        "pushed_at": "2025-07-06",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "smartthings-mcp-langowarny",
+      "name": "smartthings-mcp (langowarny)",
+      "category": "Home",
+      "subcategory": "SmartThings",
+      "brand_group": "smartthings",
+      "maker": "langowarny",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Go",
+      "repo": "langowarny/smartthings-mcp",
+      "docs_url": "https://github.com/langowarny/smartthings-mcp",
+      "auth": "SmartThings token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 316 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 4,
+        "pushed_at": "2025-12-08",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "samsung-smartthings-mcp",
+      "name": "Samsung-SmartThings-MCP",
+      "category": "Home",
+      "subcategory": "SmartThings",
+      "brand_group": "smartthings",
+      "maker": "bjornhovd",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "bjornhovd/Samsung-SmartThings-MCP",
+      "docs_url": "https://github.com/bjornhovd/Samsung-SmartThings-MCP",
+      "auth": "SmartThings token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 332 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 0,
+        "pushed_at": "2025-11-22",
+        "archived": false,
+        "license": null,
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "openhue-cli-mcp-mode",
+      "name": "OpenHue CLI (MCP mode)",
+      "category": "Home",
+      "subcategory": "Philips Hue",
+      "brand_group": "hue",
+      "maker": "OpenHue",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "openhue mcp",
+      "repo": "openhue/openhue-cli",
+      "docs_url": "https://github.com/openhue/openhue-cli",
+      "auth": "Hue bridge pairing",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Lights, rooms, scenes, brightness, colour, temperature",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 88 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 155,
+        "pushed_at": "2026-07-24",
+        "archived": false,
+        "license": "Apache-2.0",
+        "open_issues": 9,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "openhue-mcp-server",
+      "name": "openhue-mcp-server",
+      "category": "Home",
+      "subcategory": "Philips Hue",
+      "brand_group": "hue",
+      "maker": "lsemenenko",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "lsemenenko/openhue-mcp-server",
+      "docs_url": "https://github.com/lsemenenko/openhue-mcp-server",
+      "auth": "Hue bridge pairing",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 665 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 10,
+        "pushed_at": "2024-12-24",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "huemcp",
+      "name": "HueMCP",
+      "category": "Home",
+      "subcategory": "Philips Hue",
+      "brand_group": "hue",
+      "maker": "mbruton",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "mbruton/HueMCP",
+      "docs_url": "https://github.com/mbruton/HueMCP",
+      "auth": "Hue bridge pairing",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Hue v2 incl. effects and gradients",
+      "setup_difficulty": 3,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 168 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 0,
+        "pushed_at": "2026-05-05",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "ring-mcp",
+      "name": "ring-mcp",
+      "category": "Home",
+      "subcategory": "Ring",
+      "brand_group": "ring",
+      "maker": "jpcors",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "jpcors/ring-mcp",
+      "docs_url": "https://github.com/jpcors/ring-mcp",
+      "auth": "Ring account",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [
+        "alarm mode"
+      ],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Devices, alarm, snapshots, lights, events",
+      "setup_difficulty": 4,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 456 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 4,
+        "pushed_at": "2025-07-21",
+        "archived": false,
+        "license": null,
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "ecobee-mcp",
+      "name": "ecobee-mcp",
+      "category": "Home",
+      "subcategory": "Ecobee",
+      "brand_group": "ecobee",
+      "maker": "emrikol",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "emrikol/ecobee-mcp",
+      "docs_url": "https://github.com/emrikol/ecobee-mcp",
+      "auth": "Ecobee API key",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": 24,
+      "capabilities": "",
+      "setup_difficulty": 5,
+      "notes": "Ecobee no longer issues new API keys, so only existing key holders can use this.",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 63 days ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 1,
+        "pushed_at": "2026-08-18",
+        "archived": false,
+        "license": "GPL-3.0",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "sonos-mcp-server",
+      "name": "sonos-mcp-server",
+      "category": "Home",
+      "subcategory": "Sonos",
+      "brand_group": "sonos",
+      "maker": "WinstonFassett",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "WinstonFassett/sonos-mcp-server",
+      "docs_url": "https://github.com/WinstonFassett/sonos-mcp-server",
+      "auth": "Local network",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Discovery, playback, queues, volume, party mode",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "untested",
+      "status_detail": "Repo active (last commit 1 day ago); not yet tested on a real account",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 9,
+        "pushed_at": "2026-10-19",
+        "archived": false,
+        "license": null,
+        "open_issues": 2,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "sonos-ts-mcp",
+      "name": "sonos-ts-mcp",
+      "category": "Home",
+      "subcategory": "Sonos",
+      "brand_group": "sonos",
+      "maker": "Tommertom",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "Node",
+      "repo": "Tommertom/sonos-ts-mcp",
+      "docs_url": "https://github.com/Tommertom/sonos-ts-mcp",
+      "auth": "Local network (UPnP)",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Playback, library, groups, alarms, events",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 327 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 15,
+        "pushed_at": "2025-11-27",
+        "archived": false,
+        "license": null,
+        "open_issues": 1,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "mcp-govee",
+      "name": "mcp-govee",
+      "category": "Home",
+      "subcategory": "Govee",
+      "brand_group": "govee",
+      "maker": "danjam",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "See README",
+      "repo": "danjam/mcp-govee",
+      "docs_url": "https://github.com/danjam/mcp-govee",
+      "auth": "Govee API key or LAN",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Power, brightness, colour, temperature, scenes",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 233 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 1,
+        "pushed_at": "2026-03-01",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "lifx-api-mcp-server",
+      "name": "lifx-api-mcp-server",
+      "category": "Home",
+      "subcategory": "LIFX",
+      "brand_group": "lifx",
+      "maker": "furey",
+      "maker_type": "community",
+      "type": "self-hosted",
+      "endpoint": null,
+      "install": "npx -y lifx-api-mcp-server@latest",
+      "repo": "furey/lifx-api-mcp-server",
+      "docs_url": "https://github.com/furey/lifx-api-mcp-server",
+      "auth": "LIFX API token",
+      "needs_tesla_virtual_key": false,
+      "assistants": [
+        "Any MCP client (local)"
+      ],
+      "access": "read-write",
+      "risky_actions": [],
+      "price": "Free (open source)",
+      "price_reported": null,
+      "tool_count": null,
+      "capabilities": "Lights, state, scenes, effects",
+      "setup_difficulty": 2,
+      "notes": "",
+      "featured": false,
+      "affiliate_url": null,
+      "tested": null,
+      "status": "stale",
+      "status_detail": "No commits in 547 days",
+      "last_checked": "2026-10-20T00:27:15.411Z",
+      "response_ms": null,
+      "github": {
+        "stars": 3,
+        "pushed_at": "2025-04-21",
+        "archived": false,
+        "license": "MIT",
+        "open_issues": 0,
+        "latest_release": null
+      },
+      "url_checks": {
+        "docs": {
+          "http": 200,
+          "ok": true
+        }
+      }
+    }
+  ],
+  "last_run": "2026-10-20T00:27:15.411Z"
+}
