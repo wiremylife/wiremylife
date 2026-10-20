@@ -14,7 +14,7 @@ Static directory of AI connectors (MCP servers) for the car and home, with live 
 Config lives in `data/site.json`:
 
 - `kitFormAction`: Kit form id or full form action URL. `10070476` posts to `https://app.kit.com/forms/10070476/subscriptions` with the field `email_address`. No Kit script. After submit, the page shows “Check your email to confirm.”
-- `paymentLinks.featuredListing`, `paymentLinks.newsletterSponsor`, `paymentLinks.categorySponsor`: checkout URLs for the $49/mo, $99/issue, and $149/mo Buy buttons. An empty value uses `mailto:hello@wiremylife.com` with a prefilled subject.
+- `paymentLinks.featuredListing`, `paymentLinks.newsletterSponsor`, `paymentLinks.categorySponsor`: Stripe checkout URLs for the $49/mo, $99/issue, and $149/mo Buy buttons. An empty value makes Buy use `mailto:hello@wiremylife.com` with a prefilled subject. When a checkout URL is set, that mailto stays on the card as “Questions? Email us”.
 - `categorySponsors.car` and `categorySponsors.home`: optional `{ "name", "url", "until" }` for a sold category sponsor. Leave `name` empty while the slot is unsold.
 
 Still a placeholder: My stack copy (`src/my-stack.njk`).

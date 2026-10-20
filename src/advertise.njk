@@ -13,6 +13,7 @@ description: Featured listings at $49 a month, newsletter sponsorship at $99 an 
     <p>{{ tier.summary }}</p>
     <ul>{% for point in tier.points %}<li>{{ point }}</li>{% endfor %}</ul>
     <a class="btn" href="{{ tier.href }}"{% if not tier.isMailto %} target="_blank" rel="noopener"{% endif %}>Buy</a>
+    {% if not tier.isMailto %}<a class="questions" href="{{ tier.questionsHref }}">Questions? Email us</a>{% endif %}
   </article>
 {% endfor %}
 </div>

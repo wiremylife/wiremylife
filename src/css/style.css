@@ -70,6 +70,7 @@ main h1{letter-spacing:-.02em}main>h1{margin-top:32px}
 .tier .price span{font-size:16px;font-weight:600;color:var(--muted)}
 .tier ul{margin:0 0 8px;padding-left:18px}
 .tier .btn{text-align:center}
+.tier .questions{display:block;text-align:center;font-size:14px}
 .sponsor-slot{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;margin:8px 0 18px;background:var(--card)}
 .signup-confirm{font-size:18px;margin:8px 0 0}
 .rank{color:var(--muted);font-variant-numeric:tabular-nums;width:2ch}
