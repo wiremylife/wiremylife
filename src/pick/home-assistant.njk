@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Which Home Assistant MCP server should I use?
+description: Home Assistant's built-in MCP server vs ha-mcp vs hass-mcp, compared, with live status.
+---
+<h1>Which Home Assistant connector should I use?</h1>
+<p class="lead">It depends whether you want the AI to <b>use</b> your house or to <b>work on</b> it.</p>
+<div class="choose">
+  <div><h3>Use the house: "turn off downstairs"</h3><p>Start with the <a href="/c/home-assistant-mcp-server-built-in/">built-in MCP Server integration</a>. It only sees entities you expose to Assist and can't edit automations, which is a sensible boundary. Cloud assistants need your HA reachable from the internet (e.g. Home Assistant Cloud).</p></div>
+  <div><h3>Work on the house: build and debug automations</h3><p><a href="/c/ha-mcp/">ha-mcp</a> is the most popular community server. It can create and edit automations, scripts and dashboards, and read traces and history. It has a read-only mode and per-tool approval. Take a backup first.</p></div>
+  <div><h3>Lighter alternative</h3><p><a href="/c/hass-mcp/">hass-mcp</a> runs in Docker with just a URL and token, and covers entities, control, automations, history and logs.</p></div>
+</div>
+<div class="note"><b>Rule of thumb:</b> the token you give the server is the real security boundary. Use a separate HA user, and keep locks and garage doors behind confirmation.</div>
+<h2>All Home Assistant options, by current status</h2>
+{% set rows = db.connectors | where('brand_group', 'home-assistant') %}{% include "compare.njk" %}

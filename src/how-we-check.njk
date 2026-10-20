@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: How we check
+---
+<h1>How we check</h1>
+<p class="lead">Badges come from automated checks, never from payment.</p>
+<div class="facts"><dl>
+{% for key in ['tested','online_auth','untested','stale','down'] %}{% set b = db.badges[key] %}<dt><span class="badge {{ b.cls }}">{{ b.label }}</span></dt><dd>{{ b.hint }}</dd>{% endfor %}
+</dl></div>
+<h2>Every 6 hours</h2>
+<ul>
+<li><b>Hosted connectors:</b> we send the standard MCP <code>initialize</code> handshake to the public endpoint and record the reply and response time. A private connector answering "sign in first" is healthy.</li>
+<li><b>Self-hosted connectors:</b> we read the GitHub repository's last commit, archive flag and latest release. No commits in 180 days = Stale.</li>
+<li><b>Docs links:</b> we confirm every setup page still loads.</li>
+</ul>
+<h2>Weekly (coming soon)</h2>
+<p>Read-only smoke tests on real accounts (e.g. "get vehicle state", "list entities"). Passing earns <span class="badge b-tested">Tested working</span>. We never run unlock, garage or alarm commands in tests.</p>

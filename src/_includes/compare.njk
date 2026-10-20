@@ -1,0 +1,7 @@
+<div class="table-wrap"><table class="compare">
+<thead><tr><th>Connector</th><th>Status</th><th>Type</th><th>Works with</th><th>Access</th><th>Setup</th><th>Price</th></tr></thead>
+<tbody>{% for c in rows %}<tr>
+<td><a href="/c/{{ c.id }}/">{{ c.name }}</a></td><td><span class="badge {{ c.badge.cls }}">{{ c.badge.label }}</span></td>
+<td>{{ 'Hosted' if c.type == 'hosted' else ('Built-in' if c.type == 'built-in' else 'Self-hosted') }}</td>
+<td class="small">{{ c.assistants | join(', ') }}</td><td>{{ c.access }}</td><td>{{ c.setup_difficulty }}/5</td><td class="small">{{ c.price }}</td>
+</tr>{% endfor %}</tbody></table></div>

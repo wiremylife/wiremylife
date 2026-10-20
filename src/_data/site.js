@@ -1,0 +1,1 @@
+export default { name: 'WireMyLife', url: 'https://wiremylife.com', tagline: 'Which AI connectors for your car and home actually work, checked every 6 hours.', contact: 'hello@wiremylife.com' };

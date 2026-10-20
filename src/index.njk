@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+<section class="hero">
+  <h1>Can my AI connect to my <span class="grad">car</span> and <span class="grad">home</span>?</h1>
+  <p class="lead">{{ db.total }} connectors for Claude, ChatGPT, Gemini and Grok, with honest status badges that refresh every 6 hours.</p>
+  <div class="stats">
+    <div><b>{{ db.counts.tested or 0 }}</b><span>Tested working</span></div>
+    <div><b>{{ db.counts.online_auth or 0 }}</b><span>Online (sign-in required)</span></div>
+    <div><b>{{ db.counts.untested or 0 }}</b><span>Not yet tested</span></div>
+    <div><b>{{ db.counts.stale or 0 }}</b><span>Stale</span></div>
+    <div><b>{{ db.counts.down or 0 }}</b><span>Down</span></div>
+  </div>
+  <p class="small muted">Last check: {{ db.last_run | date }} · <a href="/how-we-check/">what the badges mean</a></p>
+</section>
+
+<section class="pickers">
+  <a class="pick" href="/pick/tesla/"><b>Tesla owner?</b><span>Tessie vs Teslemetry vs mytesla vs DIY, which one to pick →</span></a>
+  <a class="pick" href="/pick/home-assistant/"><b>Home Assistant user?</b><span>Built-in MCP vs ha-mcp vs hass-mcp →</span></a>
+</section>
+
+<section class="filters" id="browse">
+  <input id="q" type="search" placeholder="Search Tesla, Hue, Sonos, thermostat…" aria-label="Search connectors">
+  <div class="chips" data-group="cat"><b>Category</b><button class="on" data-v="">All</button><button data-v="Car">Car</button><button data-v="Home">Home</button></div>
+  <div class="chips" data-group="assist"><b>Works with</b><button class="on" data-v="">Any</button><button data-v="claude">Claude</button><button data-v="chatgpt">ChatGPT</button><button data-v="gemini">Gemini</button><button data-v="grok">Grok</button><button data-v="local">Local MCP client</button></div>
+  <div class="chips" data-group="status"><b>Status</b><button class="on" data-v="">All</button><button data-v="tested">Tested working</button><button data-v="online_auth">Online</button><button data-v="untested">Not yet tested</button><button data-v="stale">Stale</button><button data-v="down">Down</button></div>
+  <p class="small muted"><span id="count">{{ db.total }}</span> shown</p>
+</section>
+
+<section class="grid" id="grid">
+{% for c in db.connectors %}{% include "card.njk" %}{% endfor %}
+</section>
+<p id="empty" class="muted" hidden>Nothing matches. <a href="/submit/">Know one we're missing?</a></p>
+
+<section class="cta">
+  <h2>What broke this week, in your inbox</h2>
+  <p>One short email a week: new car and home connectors, what stopped working, price changes.</p>
+  <a class="btn" href="/newsletter/">Get the newsletter</a>
+</section>
+<script src="/js/filter.js"></script>

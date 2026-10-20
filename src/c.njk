@@ -1,0 +1,36 @@
+---
+layout: base.njk
+pagination: { data: db.connectors, size: 1, alias: c }
+permalink: "/c/{{ c.id }}/"
+eleventyComputed:
+  title: "{{ c.name }}: {{ c.subcategory }} AI connector"
+  description: "Does {{ c.name }} work with Claude, ChatGPT, Gemini or Grok? Status, setup, sign-in and price."
+---
+<p class="crumbs small"><a href="/">All connectors</a> / {{ c.category }} / {{ c.subcategory }}</p>
+<div class="detail-head">
+  <div><h1>{{ c.name }}</h1>
+  <p class="muted">{{ c.maker }} · {{ 'Official' if c.maker_type == 'official' else ('Vendor' if c.maker_type == 'vendor' else 'Community') }} · {{ 'Hosted' if c.type == 'hosted' else ('Built-in' if c.type == 'built-in' else 'Self-hosted') }}</p></div>
+  <div class="status-box"><span class="badge big {{ c.badge.cls }}">{{ c.badge.label }}</span>
+  <p class="small">{{ c.status_detail }}</p><p class="small muted">Checked {{ c.last_checked | date }}</p></div>
+</div>
+{% if c.capabilities %}<p class="lead">{{ c.capabilities }}</p>{% endif %}
+{% if c.notes %}<div class="note">{{ c.notes }}</div>{% endif %}
+<div class="facts">
+  <dl>
+    <dt>Works with</dt><dd>{{ c.assistants | join(', ') }}</dd>
+    <dt>Connect</dt><dd>{% if c.endpoint %}<code>{{ c.endpoint }}</code>{% elif c.install %}<code>{{ c.install }}</code>{% else %}See docs{% endif %}</dd>
+    <dt>Sign-in</dt><dd>{{ c.auth }}{% if c.needs_tesla_virtual_key %} · Tesla virtual key pairing needed for commands{% endif %}</dd>
+    <dt>Access</dt><dd>{{ c.access }}{% if c.risky_actions.length %} · <span class="warn">risky actions: {{ c.risky_actions | join(', ') }}</span>{% endif %}</dd>
+    <dt>Price</dt><dd>{{ c.price }}{% if c.price_reported %}<br><span class="small muted">Reported: {{ c.price_reported }}. Confirm on the vendor's site.</span>{% endif %}</dd>
+    {% if c.tool_count %}<dt>Tools</dt><dd>{{ c.tool_count }}</dd>{% endif %}
+    <dt>Setup difficulty</dt><dd><span class="dots">{% for i in range(0, 5) %}<i class="{{ 'on' if i < c.setup_difficulty }}"></i>{% endfor %}</span> {{ c.setup_difficulty }}/5</dd>
+    {% if c.github %}<dt>Repository</dt><dd><a href="https://github.com/{{ c.repo }}">{{ c.repo }}</a> · ★ {{ c.github.stars }} · last commit {{ c.github.pushed_at }}{% if c.github.license and c.github.license != 'NOASSERTION' %} · {{ c.github.license }}{% endif %}{% if c.github.latest_release %} · latest release {{ c.github.latest_release.tag }} ({{ c.github.latest_release.date }}){% endif %}</dd>{% endif %}
+    {% if c.response_ms %}<dt>Response time</dt><dd>{{ c.response_ms }} ms on last check</dd>{% endif %}
+  </dl>
+</div>
+<p><a class="btn" href="{{ c.docs_url }}" rel="nofollow noopener">Official setup docs →</a> <a class="btn ghost" href="/submit/?fix={{ c.id }}">Report a problem</a></p>
+{% set me = c.id %}{% set siblings = db.connectors | where('brand_group', c.brand_group) %}
+{% if siblings.length > 1 %}
+<h2>Other {{ c.subcategory }} options</h2>
+<div class="grid">{% for s in siblings %}{% if s.id != me %}{% set c = s %}{% include "card.njk" %}{% endif %}{% endfor %}</div>
+{% endif %}
