@@ -5,9 +5,9 @@
   "contact": "hello@wiremylife.com",
   "kitFormAction": "10070476",
   "paymentLinks": {
-    "featuredListing": "",
-    "newsletterSponsor": "",
-    "categorySponsor": ""
+    "featuredListing": "https://buy.stripe.com/cNi7sKdjS1J2b5EgCjgEg01",
+    "newsletterSponsor": "https://buy.stripe.com/3cI8wO4NmdrKc9I99RgEg02",
+    "categorySponsor": "https://buy.stripe.com/4gM14m0x60EY1v4cm3gEg00"
   },
   "categorySponsors": {
     "car": { "name": "", "url": "", "until": "" },

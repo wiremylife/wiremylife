@@ -8,10 +8,15 @@ export function kitFormAction(value) {
   return '';
 }
 
+function mailto(contact, subject) {
+  return `mailto:${contact}?subject=${encodeURIComponent(subject)}`;
+}
+
 function buyLink(paymentLinks, contact, key, subject) {
   const raw = String(paymentLinks?.[key] ?? '').trim();
-  if (/^https?:\/\//i.test(raw)) return { href: raw, isMailto: false };
-  return { href: `mailto:${contact}?subject=${encodeURIComponent(subject)}`, isMailto: true };
+  const questionsHref = mailto(contact, subject);
+  if (/^https?:\/\//i.test(raw)) return { href: raw, isMailto: false, questionsHref };
+  return { href: questionsHref, isMailto: true, questionsHref };
 }
 
 function sponsor(entry, now) {
