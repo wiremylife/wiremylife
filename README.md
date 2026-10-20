@@ -7,6 +7,6 @@ Static directory of AI connectors (MCP servers) for the car and home, with live 
 - Level 2 ("Tested working"): set `tested: {"passed": true, "date": "YYYY-MM-DD"}` on a listing after a read-only real-account test. It expires after 8 days.
 - `npm run check` → `npm run build` → `npx @11ty/eleventy --serve` (or `cd _site && python3 -m http.server 8080`).
 - `scripts/screenshot.mjs`: full-page screenshots via playwright-core + system Chrome.
-- `.github/workflows/check-and-deploy.yml`: every 6 hours: check → commit data → build → `wrangler pages deploy` (needs secrets CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, and a Pages project named `wiremylife`).
+- `.github/workflows/check-and-deploy.yml`: every 6 hours, on push to `main`, and on `workflow_dispatch`: check → commit data → build → `wrangler pages deploy` to the Cloudflare Pages project `wiremylife`. Deploy needs secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; the deploy step is skipped (the job still succeeds) when the token is not set.
 
 Placeholders to wire later: Kit form (`src/newsletter.njk`, `KIT_FORM_PLACEHOLDER`), contact email (`src/_data/site.js`), My stack copy (`src/my-stack.njk`).
