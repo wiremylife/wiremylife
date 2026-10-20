@@ -9,7 +9,7 @@ def c(name, category, sub, group, maker, maker_type, kind, docs, endpoint=None, 
         maker_type=maker_type, type=kind, endpoint=endpoint, install=install, repo=repo, docs_url=docs,
         auth=auth, needs_tesla_virtual_key=virtual_key, assistants=assistants or [], access=access,
         risky_actions=risky or [], price=price, price_reported=price_reported, tool_count=tools,
-        capabilities=caps, setup_difficulty=difficulty, notes=notes, featured=False, affiliate_url=None,
+        capabilities=caps, setup_difficulty=difficulty, notes=notes, featured=False, featuredUntil=None, affiliateUrl=None,
         tested=None, status="unchecked", status_detail="", last_checked=None, response_ms=None,
         github=None, url_checks={})
 ANY = ["Any MCP client (local)"]

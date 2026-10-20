@@ -1,0 +1,19 @@
+{# KIT_FORM_PLACEHOLDER: kitFormAction in data/site.json is a Kit form id or the full POST action. #}
+{% if site.kitFormAction %}
+<form class="signup" action="{{ site.kitFormAction }}" method="post" data-kit>
+  <div class="signup-fields">
+    <input type="email" name="email_address" required placeholder="you@example.com" aria-label="Email address" autocomplete="email">
+    <button class="btn" type="submit">Subscribe</button>
+  </div>
+  <p class="signup-confirm" role="status" tabindex="-1" hidden><b>Check your email to confirm.</b><br><span class="small">If it isn’t there in a minute, check spam.</span></p>
+</form>
+{% else %}
+<form class="signup" onsubmit="event.preventDefault(); this.querySelector('[data-soon]').hidden=false;">
+  <div class="signup-fields">
+    <input type="email" required placeholder="you@example.com" aria-label="Email address" autocomplete="email">
+    <button class="btn" type="submit">Subscribe</button>
+  </div>
+  <p class="small muted" data-soon hidden>Signup isn’t connected yet. Check back soon!</p>
+</form>
+{% endif %}
+<script src="/js/signup.js" defer></script>

@@ -1,0 +1,30 @@
+---
+layout: base.njk
+pagination:
+  data: db.categories
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+permalink: "/{{ category.slug }}/"
+eleventyComputed:
+  title: "{{ category.title }}"
+  description: "{{ category.description }}"
+---
+<h1>{{ category.title }}</h1>
+<p class="lead">{{ category.description }}</p>
+<p class="small">{{ category.connectors | length }} connectors · <a href="/">All connectors</a>
+{% set related = guides | where('categorySlug', category.slug) %}
+{% for g in related %} · <a href="/best/{{ g.slug }}/">{{ g.title }}</a> · <a href="{{ g.pickerHref }}">{{ g.pickerLabel }}</a>{% endfor %}
+</p>
+{% set sponsor = site.sponsors[category.slug] %}
+<aside class="sponsor-slot">
+  {% if sponsor %}
+  <span class="featured-flag">Sponsor</span>
+  {% if sponsor.url %}<a href="{{ sponsor.url }}" rel="sponsored nofollow noopener" target="_blank">{{ sponsor.name }}</a>{% else %}{{ sponsor.name }}{% endif %}
+  {% else %}
+  <a href="/advertise/#category-sponsor">Sponsor the {{ category.name }} category</a>
+  {% endif %}
+</aside>
+<section class="grid">
+{% for c in category.connectors %}{% include "card.njk" %}{% endfor %}
+</section>

@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Advertise on WireMyLife
+description: Featured listings at $49 a month, newsletter sponsorship at $99 an issue, and category sponsorship at $149 a month. Status badges are not for sale.
+---
+<h1>Get featured</h1>
+<p class="lead">Put your connector in front of people choosing how to connect a car or a home to Claude, ChatGPT, Gemini, or Grok.</p>
+<div class="tiers">
+{% for tier in site.tiers %}
+  <article class="tier" id="{{ tier.id }}">
+    <h2>{{ tier.name }}</h2>
+    <p class="price">{{ tier.price }}<span>{{ tier.period }}</span></p>
+    <p>{{ tier.summary }}</p>
+    <ul>{% for point in tier.points %}<li>{{ point }}</li>{% endfor %}</ul>
+    <a class="btn" href="{{ tier.href }}"{% if not tier.isMailto %} target="_blank" rel="noopener"{% endif %}>Buy</a>
+  </article>
+{% endfor %}
+</div>
+<p>Listing a connector is still free. Payment never changes a status badge. Featured listings and sponsors are always labelled. <a href="/disclosure/">Read the disclosure</a> · <a href="/how-we-check/">how the badges work</a> · <a href="/submit/">submit a free listing</a>.</p>

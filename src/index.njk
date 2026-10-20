@@ -1,5 +1,7 @@
 ---
 layout: base.njk
+title: AI connectors for your car and home
+description: Which car and home AI connectors actually work with Claude, ChatGPT, Gemini, and Grok. Live status for Tesla, Home Assistant, and more, checked every 6 hours.
 ---
 <section class="hero">
   <h1>Can my AI connect to my <span class="grad">car</span> and <span class="grad">home</span>?</h1>
@@ -14,6 +16,8 @@ layout: base.njk
   <p class="small muted">Last check: {{ db.last_run | date }} · <a href="/how-we-check/">what the badges mean</a></p>
 </section>
 
+<p class="browse-links small"><a href="/car/">Car connectors</a><a href="/home/">Home connectors</a><a href="/best/tesla-mcp-servers/">Best Tesla MCP servers</a><a href="/best/home-assistant-ai-connectors/">Best Home Assistant AI connectors</a></p>
+
 <section class="pickers">
   <a class="pick" href="/pick/tesla/"><b>Tesla owner?</b><span>Tessie vs Teslemetry vs mytesla vs DIY, which one to pick →</span></a>
   <a class="pick" href="/pick/home-assistant/"><b>Home Assistant user?</b><span>Built-in MCP vs ha-mcp vs hass-mcp →</span></a>
@@ -24,7 +28,7 @@ layout: base.njk
   <div class="chips" data-group="cat"><b>Category</b><button class="on" data-v="">All</button><button data-v="Car">Car</button><button data-v="Home">Home</button></div>
   <div class="chips" data-group="assist"><b>Works with</b><button class="on" data-v="">Any</button><button data-v="claude">Claude</button><button data-v="chatgpt">ChatGPT</button><button data-v="gemini">Gemini</button><button data-v="grok">Grok</button><button data-v="local">Local MCP client</button></div>
   <div class="chips" data-group="status"><b>Status</b><button class="on" data-v="">All</button><button data-v="tested">Tested working</button><button data-v="online_auth">Online</button><button data-v="untested">Not yet tested</button><button data-v="stale">Stale</button><button data-v="down">Down</button></div>
-  <p class="small muted"><span id="count">{{ db.total }}</span> shown</p>
+  <p class="small muted"><span id="count">{{ db.total }}</span> shown · <a href="/car/">Browse Car</a> · <a href="/home/">Browse Home</a></p>
 </section>
 
 <section class="grid" id="grid">
@@ -32,9 +36,9 @@ layout: base.njk
 </section>
 <p id="empty" class="muted" hidden>Nothing matches. <a href="/submit/">Know one we're missing?</a></p>
 
-<section class="cta">
+<section class="cta" id="newsletter">
   <h2>What broke this week, in your inbox</h2>
   <p>One short email a week: new car and home connectors, what stopped working, price changes.</p>
-  <a class="btn" href="/newsletter/">Get the newsletter</a>
+  {% include "signup.njk" %}
 </section>
 <script src="/js/filter.js"></script>
