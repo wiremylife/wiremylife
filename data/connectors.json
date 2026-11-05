@@ -36,8 +36,8 @@
       "tested": null,
       "status": "online_auth",
       "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
-      "last_checked": "2026-11-04T19:09:28.364Z",
-      "response_ms": 422,
+      "last_checked": "2026-11-05T01:19:13.587Z",
+      "response_ms": 348,
       "github": null,
       "url_checks": {
         "docs": {
@@ -84,8 +84,8 @@
       "tested": null,
       "status": "online_auth",
       "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
-      "last_checked": "2026-11-04T19:09:28.364Z",
-      "response_ms": 83,
+      "last_checked": "2026-11-05T01:19:13.587Z",
+      "response_ms": 136,
       "github": null,
       "url_checks": {
         "docs": {
@@ -130,8 +130,8 @@
       "tested": null,
       "status": "online_auth",
       "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
-      "last_checked": "2026-11-04T19:09:28.364Z",
-      "response_ms": 612,
+      "last_checked": "2026-11-05T01:19:13.587Z",
+      "response_ms": 798,
       "github": null,
       "url_checks": {
         "docs": {
@@ -177,8 +177,8 @@
       "tested": null,
       "status": "online_auth",
       "status_detail": "Answered, sign-in required (HTTP 401, advertises OAuth)",
-      "last_checked": "2026-11-04T19:09:28.364Z",
-      "response_ms": 243,
+      "last_checked": "2026-11-05T01:19:13.587Z",
+      "response_ms": 223,
       "github": null,
       "url_checks": {
         "docs": {
@@ -222,7 +222,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 251 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 1,
@@ -270,7 +270,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 10 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 142,
@@ -325,7 +325,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 127 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 5,
@@ -377,7 +377,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 54 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 0,
@@ -429,7 +429,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 212 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 1,
@@ -481,7 +481,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 8 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 1,
@@ -533,7 +533,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 601 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 20,
@@ -581,7 +581,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 98 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 0,
@@ -632,7 +632,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 195 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 0,
@@ -680,7 +680,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 21 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 0,
@@ -732,7 +732,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 7 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 2,
@@ -783,7 +783,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 188 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 6,
@@ -831,7 +831,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 383 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 2,
@@ -883,7 +883,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": null,
       "url_checks": {
@@ -924,7 +924,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": null,
       "url_checks": {
@@ -969,14 +969,14 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 1 day ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
-        "stars": 5421,
+        "stars": 5430,
         "pushed_at": "2026-11-04",
         "archived": false,
         "license": "MIT",
-        "open_issues": 5,
+        "open_issues": 9,
         "latest_release": {
           "tag": "v9.1.0",
           "date": "2026-11-04"
@@ -1020,7 +1020,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 3 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 351,
@@ -1071,7 +1071,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 284 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 575,
@@ -1119,7 +1119,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": null,
       "url_checks": {
@@ -1160,7 +1160,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 68 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 11,
@@ -1209,8 +1209,8 @@
       "tested": null,
       "status": "online_auth",
       "status_detail": "Answered, sign-in required (HTTP 401)",
-      "last_checked": "2026-11-04T19:09:28.364Z",
-      "response_ms": 404,
+      "last_checked": "2026-11-05T01:19:13.587Z",
+      "response_ms": 494,
       "github": null,
       "url_checks": {
         "docs": {
@@ -1250,7 +1250,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 1 day ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 19,
@@ -1298,7 +1298,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Docs live; built-in or self-hosted, not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": null,
       "url_checks": {
@@ -1339,7 +1339,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 487 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 5,
@@ -1387,7 +1387,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 332 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 4,
@@ -1438,7 +1438,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 348 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 0,
@@ -1486,7 +1486,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 2 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 159,
@@ -1537,7 +1537,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 681 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 10,
@@ -1585,7 +1585,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 184 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 0,
@@ -1635,7 +1635,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 472 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 4,
@@ -1683,7 +1683,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 79 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 1,
@@ -1731,7 +1731,7 @@
       "tested": null,
       "status": "untested",
       "status_detail": "Repo active (last commit 17 days ago); not yet tested on a real account",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 9,
@@ -1779,7 +1779,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 343 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 15,
@@ -1827,7 +1827,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 249 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 1,
@@ -1875,7 +1875,7 @@
       "tested": null,
       "status": "stale",
       "status_detail": "No commits in 563 days",
-      "last_checked": "2026-11-04T19:09:28.364Z",
+      "last_checked": "2026-11-05T01:19:13.587Z",
       "response_ms": null,
       "github": {
         "stars": 3,
@@ -1893,7 +1893,7 @@
       }
     }
   ],
-  "last_run": "2026-11-04T19:09:28.364Z",
+  "last_run": "2026-11-05T01:19:13.587Z",
   "changes": [
     {
       "id": "huemcp",
